@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     maxPos = i;
                 }
             }
-            String[] classes = {"Hello", "Bye", "Catch", "Danger", "Exit", "For you", "Shoot", "Hide quick", "I love you"};
+            String[] classes = {"Hello", "Bye", "Catch", "Danger", "Exit2", "For you", "Shoot", "Hide quick", "I love you"};
             result.setText(classes[maxPos]);
             t1.speak(classes[maxPos], TextToSpeech.QUEUE_FLUSH, null);
 
