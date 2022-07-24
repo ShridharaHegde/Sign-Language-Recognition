@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Sign-Language-Recognition/app/src/main/res/drawable/circle.xml" value="0.12" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Sign-Language-Recognition/app/src/main/res/drawable/result_background.xml" value="0.2305" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Sign-Language-Recognition/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Shridhara/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>

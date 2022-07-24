@@ -16,6 +16,7 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.myapplication.ml.ModelUnquant;
@@ -30,7 +31,8 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView result, confidence;
+    TextView result, confidence, text_view_progress;
+    ProgressBar progress_bar;
     ImageView imageView;
     Button picture;
     int imageSize = 224;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         result = findViewById(R.id.result);
         confidence = findViewById(R.id.confidence);
+        text_view_progress = findViewById(R.id.text_view_progress);
+        progress_bar = findViewById(R.id.progress_bar);
         imageView = findViewById(R.id.imageView);
         picture = findViewById(R.id.button);
 
@@ -122,7 +126,11 @@ public class MainActivity extends AppCompatActivity {
             for(int i = 0; i < classes.length; i++){
                 s += String.format("%s: %.1f%%\n", classes[i], confidences[i] * 100);
             }
-            confidence.setText(s);
+
+            int no = Math.round(maxConfidence * 100);
+            text_view_progress.setText(String.format("%.1f%%", maxConfidence * 100));
+            progress_bar.setProgress(no);
+
 
             // Releases model resources if no longer used.
             model.close();
